@@ -1,0 +1,71 @@
+# ====================================================================== #
+
+- type: department
+  id: Darkness
+  description: Главные враги стражи, свободных рыцарей и подобных лиц. Станьте богоподобным и уничтожьте королевство!
+  color: "#1f0404"
+  roles:
+  - DarknessBandit
+  - DarknessKnight
+  - DarknessWizard
+
+# ====================================================================== #
+
+- type: job
+  id: DarknessBandit
+  name: бандит
+  description: Магия для идиотов. То ли дело ваш моргенште́рн, которым можно гонять всех и вся..
+  playTimeTracker: JobDarknessBandit
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  startingGear: DarknessGear
+  icon: "JobIconSecurityCadet"
+  supervisors: ... Никому
+  canBeAntag: false
+
+- type: job
+  id: DarknessKnight
+  name: тёмный рыцарь
+  description: Лишь тьма и меч ваш друг. Для вас самоантагонизма нет!
+  playTimeTracker: JobDarknessKnight
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  startingGear: DarknessGear
+  icon: "JobIconSecurityCadet"
+  supervisors: ... Никому
+  canBeAntag: false
+
+- type: job
+  id: DarknessWizard
+  name: тёмный маг
+  description: М О Ч И Т Ь   А В А Н Т Ю Р И С Т О В. Для вас самоантагонизма нет!
+  playTimeTracker: JobDarknessWizard
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  startingGear: DarknessGear
+  icon: "JobIconSecurityCadet"
+  supervisors: ... Никому
+  canBeAntag: false
+
+# ====================================================================== #
+
+- type: startingGear
+  id: DarknessGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAerostatic
+    back: ClothingBackpackSatchelLeather
+    shoes: ClothingShoesAerostatic
+    mask: ClothingMaskBandBlack
+    gloves: ClothingHandsGlovesFingerless
+    outerClothing: ClothingOuterWinterHoSUnarmored
+    belt: ClothingBeltSalvageWebbing
+    pocket1: SpaceCash10
+  storage:
+    back:
+    - WizardsGrimoireNoRefund
+    - Claymore
+
+# ====================================================================== #

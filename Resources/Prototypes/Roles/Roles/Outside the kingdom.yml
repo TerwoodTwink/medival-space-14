@@ -1,0 +1,93 @@
+# ====================================================================== #
+
+- type: department
+  id: Outside
+  description: Обсолютно свободные существа. Вы не обязаны подчиняться кому либо, пока этому кому то нечем вам угрожать.
+  color: "#998467"
+  roles:
+  - OutsideNewbie
+  - OutsideKnight
+  - OutsideWizard
+
+# ====================================================================== #
+
+- type: job
+  id: OutsideNewbie
+  name: авантюрист
+  description: Да начнётся же ваше приключение!
+  playTimeTracker: JobOutsideNewbie
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: ... Никому
+  canBeAntag: true
+
+- type: job
+  id: OutsideKnight
+  name: свободный рыцарь
+  description: Спасайте любых честных или не очень трудяг... Если, конечно, вы это хотите.
+  playTimeTracker: OutsideKnight
+  startingGear: OutsideKnightGear
+  icon: "JobIconUnknown"
+  supervisors: своей чести
+  canBeAntag: true
+
+- type: job
+  id: OutsideWizard
+  name: свободный маг
+  description: Станьте тем самым мужичком, которого послали в Африке.
+  playTimeTracker: JobOutsideKnight
+  startingGear: OutsideWizardGear
+  icon: "JobIconUnknown"
+  supervisors: ... Никому
+  canBeAntag: false
+
+# ====================================================================== #
+
+- type: startingGear
+  id: OutsideGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLoungewear
+    back: ClothingBackpackSatchelLeather
+    shoes: ClothingShoesAerostatic
+    gloves: ClothingHandsGlovesFingerless
+    neck: ClothingNeckScarfStripedBrown
+    outerClothing: ClothingOuterCoatDetective
+    belt: ClothingBeltSalvageWebbing
+    pocket1: SpaceCash10
+  storage:
+    back:
+    - WizardsGrimoireNoRefund
+    - Claymore
+
+- type: startingGear
+  id: OutsideKnightGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLoungewear
+    back: ClothingBackpackSatchelLeather
+    head: ClothingHeadHelmetTemplar
+    shoes: ClothingShoesAerostatic
+    gloves: ClothingHandsGlovesLeather
+    neck: ClothingNeckScarfStripedBrown
+    outerClothing: ClothingOuterArmorCult
+    belt: ClothingBeltSalvageWebbing
+    pocket1: SpaceCash10
+  storage:
+    back:
+    - Claymore
+
+- type: startingGear
+  id: OutsideWizardGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLoungewear
+    back: ClothingBackpackSatchelLeather
+    shoes: ClothingShoesWizard
+    head: ClothingHeadHatWitch1
+    gloves: ClothingHandsGlovesLeather
+    outerClothing: ClothingOuterCoatJensen
+    belt: ClothingBeltSalvageWebbing
+    pocket1: SpaceCash10
+  storage:
+    back:
+    - WizardsGrimoireNoRefund
+
+# ====================================================================== #

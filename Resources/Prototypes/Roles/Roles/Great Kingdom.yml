@@ -1,0 +1,248 @@
+# ====================================================================== #
+
+- type: department
+  id: Rulers
+  description: Те, кому ВЫ подчиняетесь... Если вы не враг или не свободная персона.
+  color: "#998467"
+  roles:
+  - KingdomKing
+  - KingdomDuke
+  - KingdomMarquis
+  - KingdomGraph
+  - KingdomViscount
+  - KingdomBaron
+
+- type: department
+  id: Craftsmen
+  description: Трудитесь во благо королевства. Именно с вас будут брать основной налог.
+  color: "#998467"
+  roles:
+  - KingdomBlacksmith
+  - KingdomMiner
+  - KingdomAlchem
+  - KingdomDealer
+  - KingdomMechanic
+  - KingdomTailor
+  - KingdomWinemaker
+
+- type: department
+  id: Guard
+  description: Защищайте всё королевство!
+  color: "#998467"
+  roles:
+  - KingdomKingKnight
+  - KingdomKnight
+
+- type: department
+  id: Priesthood
+  description: Отвечайте за веру, дурите людей индульгенциями.
+  color: "#998467"
+  roles:
+  - KingdomBishop
+  - KingdomPriest
+  - KingdomClergyman
+# ====================================================================== #
+
+- type: job
+  id: KingdomKing
+  name: король
+  description: Правьте королевством! И не забывайте напоминать всем, насколько вы крут и насколько все ничтожества.
+  playTimeTracker: JobKingdomKing
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: своей совести
+  canBeAntag: false
+
+- type: job
+  id: KingdomDuke
+  name: герцог
+  description: Вы на одной ступени с королём, но вы ему подчиняетесь. Ваша задача - управлять землями вместе с другими правителями.
+  playTimeTracker: JobKingdomDuke
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+- type: job
+  id: KingdomMarquis
+  name: маркиз
+  description: Вы средний между графом и герцогом. Ваша задача - управлять землями вместе с другими правителями.
+  playTimeTracker: JobKingdomMarquis
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+- type: job
+  id: KingdomGraph
+  name: граф
+  description: Ходите весь важный и смотрите на простолюдинов как на дерьмо. Ваша задача - управлять землями вместе с другими правителями.
+  playTimeTracker: JobKingdomGraph
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+- type: job
+  id: KingdomViscount
+  name: виконт
+  description: Вы средний между бароном и графом. Ваша задача - управлять землями вместе с другими правителями.
+  playTimeTracker: KingdomViscount
+  requirements:
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+- type: job
+  id: KingdomBaron
+  name: барон
+  description: Конечно, вы круче простых простолюдинов... Но не на много. Ваша задача - управлять землями вместе с другими правителями.
+  playTimeTracker: KingdomBaron
+  requirements:
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+# ====================================================================== #
+
+- type: job
+  id: KingdomBlacksmith
+  name: кузнец
+  description: Куйте оружие, которое нельзя получить через книгу авантюриста.
+  playTimeTracker: JobKingdomBlacksmith
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomDealer
+  name: торговец
+  description: Постройте где-нибудь свою лавку, продавайте все что своей душе угодно.
+  playTimeTracker: JobKingdomDealer
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomMiner
+  name: шахтёр
+  description: Копайте руду для механиков и алхимиков. Восхваляйте скалу и камень.
+  playTimeTracker: JobKingdomMiner
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomAlchem
+  name: алхимик
+  description: Варите зелья, целебные отвары, собирайте цветы и грибочки.
+  playTimeTracker: JobKingdomAlchem
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomMechanic
+  name: механик
+  description: С помощью пара и шестерёнок создайте свою техно-империю. СЫЗНОВА СВЕТОЧ ВОССИЯЛ ПОСРЕДЬ СИХ УТЛЫХ ЗВЕЗД
+  playTimeTracker: JobKingdomMechanic
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomTailor
+  name: портной
+  description: Продавайте прекрасные  костюмы за космические цены.
+  playTimeTracker: JobKingdomTailor
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomWinemaker
+  name: винодел
+  description: Станьте любимцем каждого трудяги. Делайте отменные вина.
+  playTimeTracker: JobKingdomWinemaker
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+# ====================================================================== #
+
+- type: job
+  id: KingdomCommoner
+  name: простолюдин
+  description: Живите своей скучной жизнью... По крайней мере до того, как вас не найдёт король и не заставит вас ПАХАТЬ ВО СЛАВУ КОРОЛЕВСТВА
+  playTimeTracker: JobKingdomCommoner
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: вообще всем
+  canBeAntag: true
+
+# ====================================================================== #
+
+- type: job
+  id: KingdomKingKnight
+  name: королевский стражник
+  description: Защищайте всю шестёрку правителей, чтобы ваша(и не только) жизнь была всё хуже и хуже.
+  playTimeTracker: KingdomKingKnight
+  requirements:
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+- type: job
+  id: KingdomKnight
+  name: городской стражник
+  description: Стража всего королевства. Больше добавить нечего.
+  playTimeTracker: KingdomKnight
+  requirements:
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: false
+
+# ====================================================================== #
+
+- type: job
+  id: KingdomBishop
+  name: эпископ
+  description: Ведите духовные собрания, направляйте паломников по пути веры и исцеляйте души с помощью священных ритуалов.
+  playTimeTracker: JobKingdomBishop
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomPriest
+  name: священник
+  description: Проведите обряды и молебны, даруйте людям надежду и утешение.
+  playTimeTracker: JobKingdomPriest
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+- type: job
+  id: KingdomClergyman
+  name: священнослужитель
+  description: Помогайте священнику во всём, что можно.
+  playTimeTracker: JobKingdomClergyman
+  startingGear: OutsideGear
+  icon: "JobIconUnknown"
+  supervisors: королю
+  canBeAntag: true
+
+# ====================================================================== #
